@@ -48,21 +48,9 @@ export class UserComponent implements OnInit, OnDestroy {
       alert(error.message);
     },
     complete: () => {console.log("Completed!");}
-      //แบบเก่า
-    //   data => {
-    //   console.log(data);
-    // },error => {
-    //   console.log(error);
-    //   alert(error.message);
     });
-    // this.route.params.subscribe( (params: Params) => {
-    //     this.id =+params['id'];
-    //   }
-    // )
   }
   onActivate(){
-    // this.userActivated = !this.userActivated
-    // this.userService.activatedEmiter.emit(this.userActivated)
     this.userService.activatedEmiter.next(true)
   }
   ngOnDestroy(): void {
